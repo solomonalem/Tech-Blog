@@ -3,7 +3,7 @@ const { Post, User, Comment } = require('../models');
 
 
 // homepage
-    
+
   router.get('/', (req, res) => {
     // console.log(req.session);
     Post.findAll({
@@ -52,6 +52,17 @@ const { Post, User, Comment } = require('../models');
     }
   
     res.render('login');
+  });
+
+// signup
+
+  router.get('/signup', (req, res) => {
+    if (req.session.loggedIn) {
+      res.redirect('/');
+      return;
+    }
+  
+    res.render('signup');
   });
 
  // single-post
