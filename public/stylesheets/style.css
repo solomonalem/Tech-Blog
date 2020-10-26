@@ -35,7 +35,6 @@ p {
 }
 form {
   margin: 1rem;
-
 }
 
 a {
@@ -52,7 +51,7 @@ a:hover {
 button {
   background-color: #225ca3;
   border: 0;
-  padding: 1%;
+  padding: 0.5rem 1.3rem;
   color: white;
   font-weight: bold;
   transition: background-color 0.1s;
@@ -62,7 +61,6 @@ button {
 
 button:hover {
   background-color: #3486eb;
-  
 }
 
 .post-list {
@@ -112,6 +110,7 @@ header {
   align-items: center;
   padding: 0.4rem 1rem;
   background-color: var(--bgc-one);
+
   color: white;
 }
 .logo a {
@@ -131,8 +130,9 @@ header h1 {
   font-size: 1em;
 }
 header nav a {
-  color: white;
+  color: rgb(223, 227, 230);
   margin-right: 2rem;
+  font-size: 0.9rem;
 }
 #logout {
   color: rgb(71, 71, 71) !important;
@@ -223,6 +223,12 @@ main {
 }
 .create-new-post {
   margin: 0 2rem;
+  /* border:1px solid rgb(182, 182, 182); */
+  box-shadow: 0 0 10px 1px rgba(187, 189, 196, 0.418);
+
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
 }
 .your-posts {
   margin: 1rem;
@@ -307,7 +313,7 @@ main {
     rgba(71, 138, 228, 1) 100%
   );
   width: 40%;
-  padding: 2rem 3rem;
+  padding: 2rem 2rem;
   margin: 2rem auto;
 }
 .signup-form .logo {
@@ -364,7 +370,8 @@ main {
 .comments {
   background-color: rgb(255, 255, 255);
   padding: 1rem;
-  margin: 0 1rem;
+  margin: 0.3rem 1rem;
+  border-radius: 0.5rem;
 }
 .comment {
   padding: 0.5rem;
@@ -389,7 +396,7 @@ main {
 .comment-body {
   width: 95%;
   background-color: var(--primary-color);
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   padding: 1rem;
 }
 
@@ -411,9 +418,18 @@ main {
 }
 
 .new-post-form input {
-  width: 300px;
+  /* width: 300px; */
 }
-
+.edit-form-container {
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-top: 0.8rem;
+  box-shadow: 0 0 10px 1px rgba(187, 189, 196, 0.418);
+}
+.edit-form-container form div {
+  margin-bottom: 3rem;
+}
 .edit-post-form {
   margin-bottom: 5%;
 }
@@ -436,4 +452,50 @@ footer div {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+/* -------===================== media queries ============================= */
+
+@media only screen and (max-width: 990px) {
+  .login-form {
+    width: 50%;
+    padding: 2rem 2rem;
+  }
+  .signup-form {
+    width: 50%;
+    padding: 2rem 2rem;
+  }
+}
+@media only screen and (max-width: 820px) {
+  .login-form {
+    width: 60%;
+    padding: 2rem 1rem;
+  }
+  .signup-form {
+    width: 60%;
+    padding: 2rem 1rem;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .login-form {
+    width: 80%;
+  }
+  .signup-form {
+    width: 80%;
+  }
+  header nav a {
+    margin-right: 1rem;
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .login-form {
+    width: 94%;
+  }
+  .signup-form {
+    width: 94%;
+  }
+  header nav a {
+    margin-right: 0.2rem;
+    font-size: 0.8rem;
+  }
 }

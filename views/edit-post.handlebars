@@ -1,5 +1,5 @@
-<article>
-    <a href="/dashboard"> &larr; Back to dashboard</a>
+<a href="/dashboard"> &larr; Back to dashboard</a>
+<article class="edit-form-container">
     <h2>
         Edit Post
     </h2>
@@ -10,15 +10,12 @@
             <input name="post-content" type="text" value="{{ post.post_content}}" />
 
         </div>
-        <div>
 
-            <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
-        </div>
         <button type="submit">Save post</button>
         <button type="button" class="delete-post-btn">Delete post</button>
     </form>
 </article>
-<hr>
+{{!-- <hr> --}}
 <form class="comment-form">
     <div>
         <textarea name="comment-body"></textarea>
@@ -28,7 +25,10 @@
         <button type="submit">add comment</button>
     </div>
 </form>
+<div>
 
+    <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+</div>
 {{!-- comment partials  --}}
 {{> comments post.comments}}
 
