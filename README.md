@@ -25,7 +25,7 @@ Its fullstack web application built using Sequelize as ORM and MySql as database
 
 ## Usage
 
-[Deployed](https://git.heroku.com/hidden-beach-99915.git)
+[Deployed](https://ancient-ridge-63478.herokuapp.com/)
 
 ## License
 
