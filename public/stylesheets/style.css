@@ -1,3 +1,14 @@
+:root {
+  --primary-color: #f1f3f7;
+  --secondary-color: #b9d0d3;
+  --tertiary-color: #39a6b2;
+  --text-color: #56a5af;
+  --heading-color: #3a3f42;
+  --light-heading: #c1e2e2;
+  --bgc-one: #517ac1;
+  --bgc-two: #c1e2e2;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,12 +20,19 @@ html {
   margin: 0;
   font-family: sans-serif;
   color: #333;
+  font-size: 16px;
+  background-color: var(--primary-color);
 }
-
+li {
+  list-style: none;
+}
+form {
+  margin: 1rem;
+}
 a {
   text-decoration: none;
-  color: #225ca3;
-  font-weight: bold;
+  color: #3c74c4;
+  /* font-weight: bold; */
   transition: color 0.1s;
 }
 
@@ -71,7 +89,7 @@ form label {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -82,16 +100,42 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1%;
+  padding: 0.4rem 1rem;
+  background-color: var(--bgc-one);
+  color: white;
+}
+.logo a {
+  color: rgb(255, 255, 255);
+}
+.logo span {
+  color: var(--bgc-one);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background: rgb(255, 255, 255);
+  padding: 0.4rem;
+  margin-right: 0.4rem;
 }
 
 header h1 {
   font-size: 1em;
 }
+header nav a {
+  color: white;
+  margin-right: 2rem;
+}
+#logout {
+  color: rgb(71, 71, 71) !important;
+  border-radius: 0.2rem;
+  background-color: rgb(46, 224, 126);
+  padding: 0.4rem 1rem;
+  /* font-weight: lighter; */
+  font-size: 0.8rem;
+}
 
 main {
   flex: 1;
-  padding: 2% 4%;
+  padding: 2% 14%;
 }
 
 .btn-no-style {
@@ -123,17 +167,51 @@ main {
 .post {
   margin-bottom: 2%;
   line-height: 150%;
+  /* background-color: rgb(192, 196, 248); */
+  margin: 1rem;
+  border-radius: 0.3rem;
+  box-shadow: 0px 0px 6px -1px rgb(137, 137, 137);
 }
 
-.post .title span {
+.post .title p {
+  background-color: rgb(81, 152, 140);
   font-style: italic;
   font-size: 90%;
   color: #7d7d7d;
 }
-
+.post .title {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bgc-one);
+  padding: 0.4rem 1rem;
+  color: white;
+}
+.post .title .title-info {
+  color: rgb(207, 220, 230);
+  font-size: 0.7rem;
+}
+.title-heading a {
+  color: white;
+}
+.post .meta {
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+}
+.create-new-post {
+  margin: 0 2rem;
+}
+.your-posts {
+  margin: 1rem;
+  padding: 0;
+}
+.your-posts h2 {
+  margin-left: 1rem;
+}
 .edit-link {
   display: block;
-  margin: -1.5% 0 2% 0;
+  margin: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 .upvote-btn {
@@ -148,20 +226,49 @@ main {
 .comment-form {
   margin-bottom: 5%;
 }
-
+.comments {
+  background-color: #fff;
+  padding: 1rem;
+  margin: 0 1rem;
+}
 .comment {
-  padding: 1%;
-  margin-bottom: 1%;
+  padding: 0.5rem;
+  margin: 0.4rem 1rem;
+
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.comment-avatar {
+  background-color: rgb(203, 205, 238);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
 
-.comment:nth-child(odd) {
-  background-color: #fff5eb;
+.comment-body {
+  width: 95%;
+  background-color: var(--primary-color);
+  border-radius: 0.3rem;
+  padding: 1rem;
 }
 
 .comment .meta {
-  font-size: 90%;
   margin-bottom: 0.5%;
   opacity: 0.6;
+  display: flex;
+  justify-content: space-between;
+}
+.comment-username {
+  text-transform: capitalize;
+}
+.comment-info {
+  font-size: 0.8rem;
 }
 
 .new-post-form input {
@@ -176,6 +283,18 @@ footer {
   border-top: 1px solid #ccc;
   display: flex;
   justify-content: center;
-  padding: 1%;
+  padding: 2rem;
   font-size: 110%;
+}
+footer div {
+  height: 2rem;
+  width: 2rem;
+  padding: 0.4rem;
+  border-radius: 50%;
+  border: 1px solid black;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

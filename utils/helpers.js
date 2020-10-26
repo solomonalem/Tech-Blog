@@ -19,5 +19,8 @@ module.exports = {
         .split('/')[0]
         .split('?')[0];
     },
+    get_first:word=>{
+        return word.charAt(0).toUpperCase();
+    }
   }
   

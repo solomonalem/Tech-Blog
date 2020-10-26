@@ -1,4 +1,4 @@
-const {format_date,format_plural,format_url} = require('../utils/helpers.js');
+const {format_date,format_plural,get_first} = require('../utils/helpers.js');
 
 test('format_date() returns a date string', () => {
     const date = new Date('2020-03-20 16:12:03');
@@ -11,6 +11,10 @@ test('format_plural() returns plural', () => {
     expect(format_plural("Tiger",2)).toBe('Tigers');
     expect(format_plural("Lion",1)).toBe('Lion');
   });
+
+ test('get_first() ',()=>{
+   expect(get_first('wediww')).toBe('w');
+ }) 
 
 
 // test('format_url() returns a simplified url string', () => {

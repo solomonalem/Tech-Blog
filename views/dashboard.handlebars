@@ -1,4 +1,4 @@
-<section>
+<section class="create-new-post">
     <h2>Create New Post</h2>
 
     <form class="new-post-form">
@@ -16,16 +16,17 @@
 </section>
 
 {{#if posts.length}}
-<section>
+<section class="your-posts">
     <h2>Your Posts</h2>
-    <ol>
+    <ul>
         {{#each posts as |post|}}
         <li>
             {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+            <div><a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a></div>
+
         </li>
         {{/each}}
-    </ol>
+    </ul>
 </section>
 {{/if}}
 
